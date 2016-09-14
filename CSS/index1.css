@@ -1,0 +1,244 @@
+img{
+	width: 100%;
+	height: 100%;
+}
+.sizscolor {
+font-weight:bold;
+filter:
+Dropshadow(offx=1,offy=0,color=blue)
+Dropshadow(offx=0,offy=1,color=blue)
+Dropshadow(offx=0,offy=-1,color=blue)
+Dropshadow(offx=-1,offy=0,color=blue);
+color:#000;
+}
+/*top*/
+#top{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 65px;
+	z-index: 1000;
+	background: rgba(0,0,0,0.2);
+	border-radius: 2px;
+	font: 30px/30px "宋体";
+	font-weight:  bold;
+	text-align: center;
+}
+#hmportrait img{
+	margin-left: 10px;
+	display: block;
+	width: 60px;
+	height: 60px;
+	border: 3px solid #000;
+	border-radius: 50%;
+}
+#hmname{
+	margin-left: 20px;
+}
+#hmname p{
+	padding: 0 10px;
+}
+#hmname p:first-of-type{
+	border-bottom: 1px solid #000;
+}
+#anchor{
+	margin-right: 30px;
+	margin-bottom: 5px;
+	font: 30px/60px "楷体";
+}
+#anchor li{
+	padding: 0 10px;
+}
+#anchor a{
+	color: #000;
+}
+
+
+/*侧边栏*/
+aside{
+	position: fixed;
+    right: 10px;
+    top: 30%;
+    z-index: 1000;
+    width: 50px;
+    height: auto;
+}
+aside a{
+	background: url(../img/aside1.png) no-repeat center center; 
+	display: block;
+    margin: 10px 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+aside a p{
+	display: none;
+	color: #000;
+	position: absolute;
+    font-size: 9px;
+    font-weight: normal;
+    top: 0;
+    line-height: 20px;
+    right: 100%;
+    width: 100px;
+    padding-right: 5px;
+    text-align: right;
+}
+aside a:hover p{
+	display: block;
+}
+.asselect{
+	background: url(../img/aside2.png) no-repeat center center;
+}
+
+#box{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+/*box1 首页*/
+#box1{
+	padding-top: 65px;
+}
+#box1 img{
+	display: block;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	margin: 100px auto;
+}
+#home{
+	margin:0 150px;
+	text-align: center;
+}
+#hometop{
+	border-bottom: 2px solid #B2B2B2;
+	font: 22px/40px "微软雅黑";
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+#homebox p{
+	font: 18px/30px "黑体";
+	color: #2B2B2B;
+}
+
+
+/*box2 关于我*/
+
+/*每个box的表头*/
+
+.boxhead{
+	text-align: center;
+}
+.boxhead p:first-child{
+	margin: 10px 0;
+	font: 24px/20px "楷体";
+	font-weight: bold;
+}
+.boxhead p:nth-of-type(2){
+	display: inline-block;
+	margin: 10px auto;
+	font-family: "allerbold";
+    font-weight: bold;
+    color: #f00;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-top: 2px solid red;
+}
+
+
+#box2{
+	padding-top: 65px;
+}
+
+
+
+
+
+
+#box3{
+	padding-top: 65px;
+}
+
+#box4{
+	padding-top: 65px;
+}
+
+
+/*box5自我介绍*/
+#box5{
+	padding-top: 65px;
+	position: relative;
+}
+#box5text{
+	margin: 80px 140px;
+	font: 12px/40px "微软雅黑";
+}
+#box5 img{
+	display: block;
+	position: absolute;
+	top: 100px;
+	right: 140px;
+	width: 100px;
+	height: 180px;
+}
+
+/*box6 联系方式*/
+#box6{
+	padding-top: 65px;
+	text-align: center;
+}
+.box6text{
+	font-size: 24px;
+	margin: 20px;
+}
+.box6text span{
+	margin: 5px;
+}
+.box6text span:nth-of-type(1){
+	color: orangered;
+}
+.box6text span:nth-of-type(2){
+	color: blue;
+}
+.box6text span:nth-of-type(3){
+	color: green;
+}
+.box6text span:nth-of-type(4){
+	color: red;
+}
+#box6text p{
+	font: 16px/20px "楷体";
+	margin: 5px;
+}
+#contact{
+	width: 500px;
+	border: 5px solid #fff;
+	border-radius: 10px;
+	margin: 20px auto;
+	font: 16px/20px "微软雅黑";
+	text-align: left;
+}
+#contact .fl{
+	margin-left: 20px;
+}
+#contact img{
+	display: block;
+	width: 90px;
+	height: 100px;
+}
+#contact a{
+	color: #000;
+}
+
+footer{
+	border-top: 2px solid #2B2B2B;
+}
+footer a{
+	color: #2C2B2B;
+}
+footer p{
+	margin: 10px;
+}
