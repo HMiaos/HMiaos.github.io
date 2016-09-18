@@ -120,12 +120,12 @@
 						</li>
 						<li>
 							<h3>静态页面</h2>
-							<a href=""><img src="" alt="" /></a>
+							<a href=""><img src="img/xiangmu-2.png" alt="" /></a>
 							<p>爱奇艺的一个静态页面</p>
 						</li>
 						<li>
 							<h3>小游戏</h2>
-							<a href=""><img src="" alt="" /></a>
+							<a href=""><img src="img/xiangmu3.png" alt="" /></a>
 							<p>一个自制的简易版小游戏</p>
 						</li>
 						<li>
@@ -265,7 +265,64 @@
 		$('.level').removeClass('active').filter(this).addClass('active');
 			$('.experiencebody').hide().eq($(this).index()).show();
 		});
-			
+		
+		/*鼠标滚轮*/
+		var num =0
+		mScroll(document,function(){
+			num--
+			if(num<0){
+				num=0;
+				return;
+			}
+			$('aside a').attr("class", "")
+			$('aside a').eq(num).attr("class", "asselect");
+			$('#box').animate({
+					top: -$('#box1')[0].offsetHeight*num
+				},
+				600, 
+				'linear'
+				)
+		},function(){
+			num++
+			if(num>5){
+				num=5;
+				return;
+			}
+			$('aside a').attr("class", "")
+			$('aside a').eq(num).attr("class", "asselect");
+			$('#box').animate({
+					top: -$('#box1')[0].offsetHeight*num
+				},
+				600, 
+				'linear'
+				)
+		})
+		function mScroll(obj,upper,down){
+		obj.addEventListener('DOMMouseScroll', fn, false);
+		obj.onmousewheel  = fn;
+
+		function fn(ev){
+			var n;
+			/*
+				负数代表向下
+				正数是向上
+				n就是这个数字
+			*/
+			if(ev.detail){
+				//firefox
+				n = -ev.detail;
+			}else{
+				//ie和chrome
+				n = ev.wheelDelta;
+			}
+			//n小于0向下滚动，否则向上。
+			if(n<0){
+				down();
+			}else{
+				upper();
+			}
+		}
+	}	
 			
 		</script>
 	</body>
