@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>何苗的个人简历</title>
-    <style>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			何苗个人简历
+		</title>
+		<style>
 			body{
 				background: url(img/bg.jpg) no-repeat;
 				background-size: cover;
@@ -11,23 +13,17 @@
 				overflow: hidden;
 			}
 		</style>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
- 		<link rel="stylesheet" type="text/css" href="CSS/样式清零.css"/>
+		<link rel="stylesheet" type="text/css" href="CSS/样式清零.css"/>
 		<link rel="stylesheet" type="text/css" href="CSS/index1.css"/>
 		
 		<script src="JS/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="JS/mTween.js" type="text/javascript" charset="utf-8"></script>
 		<script src="JS/tween.js" type="text/javascript" charset="utf-8"></script>
 		
-  
-  
-  </head>
-  <body>
-    <div id="top">
+		
+	</head>
+	<body>
+		<div id="top">
 			<div class="fl">
 				<div id='hmportrait' class="fl">
 					<img src="img/20160423131731_aa5a0ea76a646941aca567ab4391f16d_1.jpeg" alt="" />				</div>
@@ -184,27 +180,28 @@
 			$("#box6").height(document.body.clientWidth);
 		
 		//点击top右侧标签时
-		for(let i=0;i<$('#anchor li a').length;i++){
-			$('#anchor li a').eq(i).click(function(){
+			$('#anchor li a').click(function(){
 //				$('#box').css('top',document.body.clientHeight*(i+1)+'px')
-				$('#box')[0].style.top = -$('#box1')[0].offsetHeight*i+'px';
+				$('#box')[0].style.top = -$('#box1')[0].offsetHeight*$('#anchor li a').index(this)+'px';
 				$('aside a').attr("class", "")
-				$('aside a').eq(i).attr("class", "asselect")
+				$('aside a').eq($('#anchor li a').index(this)).attr("class", "asselect")
 			})
-		}
 		//点击侧边栏时
-		for(let i=0;i<$('aside a').length;i++){
-			$('aside a').eq(i).click(function(){
+			$('aside a').click(function(){
 				$('aside a').attr("class", "")
-				$('aside a').eq(i).attr("class", "asselect")
+				this.className = "asselect";
 				$('#box').animate({
-					top: -$('#box1')[0].offsetHeight*i
+					top: -$('#box1')[0].offsetHeight*$('aside a').index(this)
 				},
 				600, 
 				'linear'
 				)
-			})
-		}
+		})
 		</script>
-  </body>
+	</body>
 </html>
+<!--2017806936@qq.com
+meechengs#gmail.com
+Q 744529
+gykdy@126.com
+zhaopin@lecai.com-->
