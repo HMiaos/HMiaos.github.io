@@ -1,7 +1,6 @@
 /*样式重置*/
 body,dl,dd,p,h1,h2,h3,h4,h5,h6{
 	margin: 0;
-	font-size: 12px;
 }
 ol,ul{
 	margin:0;

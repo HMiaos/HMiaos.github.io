@@ -12,6 +12,16 @@
 				position: relative;
 				overflow: hidden;
 			}
+			@-webkit-keyframes productionborder {
+			  from { border-color: #fc9200; -webkit-box-shadow: 0 0 9px #333; }
+			  50% { border-color: #ffb515; -webkit-box-shadow: 0 0 18px #ffb515; }
+			  to { border-color: #fc9200; -webkit-box-shadow: 0 0 9px #333; }
+			}
+			.productionborder{ 
+				-webkit-animation-name: productionborder; 
+				-webkit-animation-duration: 3s; 
+				animation-fill-mode : forwards; 
+				}
 		</style>
 		<link rel="stylesheet" type="text/css" href="CSS/样式清零.css"/>
 		<link rel="stylesheet" type="text/css" href="CSS/index1.css"/>
@@ -65,12 +75,11 @@
 			<div id="box1">
 				<img src="img/7Q2f-3k3mZ1eT1kShs-qo.jpg" alt="" />
 				<div id="home">
-					<p id="hometop">文本1</p>
+					<p id="hometop">生活是一种绵延不绝的渴望,渴望不断上升,变得更伟大而高贵。</p>
 					<div id="homebox">
 						<p>我叫何苗</p>
 						<p>94.02.01出生</p>
-						<p>文本2</p>
-						<p>文本3</p>
+						<p>一名前端研发工程师</p>
 					</div>
 				</div>
 			</div>
@@ -102,6 +111,30 @@
 					<p>作品展示</p>
 					<p>· Production ·</p>
 				</div>
+				<div id="production">
+					<ul>
+						<li>
+							<h3>freecodecamp</h2>
+							<a href=""><img src="" alt="" /></a>
+							<p>freecodecamp的一个简单的致敬页</p>
+						</li>
+						<li>
+							<h3>静态页面</h2>
+							<a href=""><img src="" alt="" /></a>
+							<p>爱奇艺的一个静态页面</p>
+						</li>
+						<li>
+							<h3>小游戏</h2>
+							<a href=""><img src="" alt="" /></a>
+							<p>一个自制的简易版小游戏</p>
+						</li>
+						<li>
+							<h3>酷简历</h2>
+							<a href=""><img src="" alt="" /></a>
+							<p>一个酷炫的简历模板</p>
+						</li>
+					</ul>
+				</div>
 			</div>
 			<div id="box5">
 				<div class="boxhead">
@@ -124,7 +157,22 @@
 					<p>学习经历</p>
 					<p>· experience ·</p>
 				</div>
-				
+				<div id="experience">
+					<div id="experiencehead" class="clearFix">
+						<div class="level active"><img src="img/levelI.png" alt="" /></div>
+						<div class="level"><img src="img/levelII.png" alt="" /></div>
+						<div class="level"><img src="img/levelIIV.png" alt="" /></div>
+						<div class="level"><img src="img/levelIV.png" alt="" /></div>
+					</div>
+					<div id="experiencebody">
+						<div class="experiencebody show">1111</div>
+						<div class="experiencebody">2222</div>
+						<div class="experiencebody">3333</div>
+						<div class="experiencebody">4444</div>
+						
+						
+					</div>
+				</div>
 				
 				
 			</div>
@@ -197,6 +245,28 @@
 				'linear'
 				)
 		})
+			
+			
+		/*box3*/
+		$('#production li').mouseover(function (event){
+			this.className = 'productionborder';
+			$('#production li p').eq($('#production li').index(this)).css({
+				"display":"block",
+				"bottom":"-45px",
+				"left":"20px"
+			})
+		})
+		$('#production li').mouseleave(function (){
+			this.className = '';
+			$('#production li p').eq($('#production li').index(this)).css("display","")
+		})
+		/*box4*/
+		$('.level').click(function(){
+		$('.level').removeClass('active').filter(this).addClass('active');
+			$('.experiencebody').hide().eq($(this).index()).show();
+		});
+			
+			
 		</script>
 	</body>
 </html>
