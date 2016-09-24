@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品计价</title>
+		<link rel="stylesheet" type="text/css" href="CSS/spjj.css"/>
+	</head>
+	<body>
+		<div id="box" class="mauto">
+			<p>
+				<span class="name">商品1</span>
+				<input type="button" value="-"class="rad"/>
+				<i></i>
+				<input type="button" value="+"class="add"/>
+				<span> 单价：<span class="ptext">12.5</span> 元 </span>
+				<span> 小计：<span class="psum"></span> 元</span>
+			</p>
+			<p>
+				<span class="name">商品2</span>
+				<input type="button" value="-"class="rad"/>
+				<i></i>
+				<input type="button" value="+"class="add"/>
+				<span> 单价：<span class="ptext">10.5</span> 元 </span>
+				<span> 小计：<span class="psum"></span> 元</span>
+			</p>
+			<p>
+				<span class="name">商品3</span>
+				<input type="button" value="-"class="rad"/>
+				<i></i>
+				<input type="button" value="+"class="add"/>
+				<span> 单价：<span class="ptext">8.5</span> 元 </span>
+				<span> 小计：<span class="psum"></span> 元</span>
+			</p>
+			<p>
+				<span class="name">商品4</span>
+				<input type="button" value="-"class="rad"/>
+				<i></i>
+				<input type="button" value="+"class="add"/>
+				<span> 单价：<span class="ptext">8</span> 元 </span>
+				<span> 小计：<span class="psum"></span> 元</span>
+			</p>
+			<p>
+				<span class="name">商品5</span>
+				<input type="button" value="-"class="rad"/>
+				<i>0</i>
+				<input type="button" value="+"class="add"/>
+				<span> 单价：<span class="ptext">13.5</span> 元 </span>
+				<span> 小计：<span class="psum"></span> 元</span>
+			</p>
+			<p>商品共： <span id="goods"></span> 件</p>
+			<p>共花费了： <span id="money"></span> 元</p>
+			<p>最贵的商品：<span id="maxname"></span>  <span id="maxgoods"></span> <span id="maxmoney"></span></p>
+		</div>
+		
+		<script type="text/javascript">
+			var is = document.getElementsByTagName('i');
+			var rads = document.getElementsByClassName('rad');
+			var adds = document.getElementsByClassName('add');
+			var psums = document.getElementsByClassName('psum');
+			var names = document.getElementsByClassName('name');
+			var goods = document.getElementById('goods');
+			var money = document.getElementById('money');
+			var maxgoods= document.getElementById('maxgoods');
+			var maxmoney = document.getElementById('maxmoney');
+			var maxname = document.getElementById('maxname');
+			var str = '';
+			var num = [0,0,0,0,0];
+			var numpsum = [0,0,0,0,0];
+			var price = [12.5,10.5,8.5,8,13.5]
+			//FOR循环套属性
+			for(var i=0;i<is.length;i++){
+				is[i].innerHTML = num[i];
+				psums[i].innerHTML = numpsum[i];
+				//设置HM值使数量,单价,总价 数组相对应
+				is[i].hm=i;
+				rads[i].hm = i;
+				adds[i].hm = i;
+				psums[i].hm = i;
+			//减
+				rads[i].onclick = function(){
+					if(num[this.hm]>=1){
+						num[this.hm]--;
+						is[this.hm].innerHTML =  num[this.hm];
+						goods.innerHTML = num[1]+num[2]+num[3]+num[4]+num[0];
+						numpsum[this.hm] = num[this.hm]*price[this.hm];
+						psums[this.hm] = num[this.hm]*price[this.hm];
+						psums[this.hm].innerHTML = numpsum[this.hm];
+						money.innerHTML = num[0]*12.5+num[1]*10.5+num[2]*8.5+num[3]*8+num[4]*13.5;
+					}else{
+						num[this.hm]=0;
+					}
+					var imaxmoney = Math.max.apply(Math,numpsum) ;
+					maxmoney.innerHTML = imaxmoney+'元';
+//					maxname.innerHTML = names[Math.max.apply(Math,numpsum).hm]
+				}
+				//加
+				adds[i].onclick = function(){
+					num[this.hm]++;
+					is[this.hm].innerHTML =  num[this.hm];
+					goods.innerHTML = num[1]+num[2]+num[3]+num[4]+num[0];
+					numpsum[this.hm] = num[this.hm]*price[this.hm];
+					psums[this.hm].innerHTML = numpsum[this.hm];
+					money.innerHTML = num[0]*12.5+num[1]*10.5+num[2]*8.5+num[3]*8+num[4]*13.5;
+					var imaxmoney = Math.max.apply(Math,numpsum) ;
+					maxmoney.innerHTML = imaxmoney+'元';
+				}
+				
+			}
+			//合计
+			goods.innerHTML = num[1]+num[2]+num[3]+num[4]+num[0];
+			money.innerHTML = numpsum[1]+numpsum[2]+numpsum[3]+numpsum[4]+numpsum[0];
+			
+			
+			
+		</script>
+			
+	</body>
+</html>

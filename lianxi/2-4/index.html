@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>指向显示2</title>
+		<style>
+			/*样式重置*/
+			body,dl,dd,p,h1,h2,h3,h4,h5,h6{
+				margin: 0;
+				font-size: 12px;
+			}
+			ol,ul{
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			a{
+				text-decoration:none;
+			}
+			img{
+				border:none;
+				vertical-align: top;
+			}
+			table{
+				border-collapse:collapse;
+			}
+			th,td{
+				padding:0;
+			}
+			th,td{
+				width:100px;
+				height:100px;
+			}
+			input{
+				padding: 0;
+				margin: 0;
+			}
+			i{
+				margin: 0 5px;
+				font-style: normal;
+				font-size: 12px;
+			}
+			
+			/*常用工具*/
+			.clearFix:after{
+				content: "";
+				clear: both;
+				display: block;
+			}
+			.fl{
+				float: left;
+			}
+			.fr{
+				float: right;
+			}
+			.mauto{
+				margin: 0 auto;
+			}
+			
+			
+			/*样式*/
+			#box{
+				width: 590px;
+				height: 590px;
+				border: 5px solid #00FFFF;
+				position: relative;
+			}
+			#box div{
+				width: 50px;
+				height: 50px;
+				position: absolute;
+			}
+			#box .tran1{
+				background: url(img/ff.jpg);
+			}
+			.hm{
+				opacity: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box" class="mauto">
+			
+		</div>
+		<script type="text/javascript">
+			var box = document.getElementById('box');
+			var divs = box.getElementsByTagName('div');
+			var str = '';
+			var num = i;
+			
+			for(var i=0;i<100;i++){
+				str += '<div style="left:'+i%10*60+'px;top:'+~~(i/10)*60+'px;">'+'</div>'
+			}
+			box.innerHTML += str;
+			for(var i=0;i<100;i++){
+				divs[i].leo = i;
+				divs[i].onmouseover = function(){
+					console.log(this.leo)
+					this.className = 'tran1';
+					console.log(this.leo)
+					this.style.backgroundPositionX = -this.leo%10*50+"px";
+					this.style.backgroundPositionY = -~~(this.leo/10)*50+"px";
+				}
+//				divs[i].onmouseleave = function(){
+//					this.className = 'hm';
+//				}
+			}
+		</script>
+	</body>
+</html>
+
+

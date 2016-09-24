@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>文字转移</title>
+		<link rel="stylesheet" type="text/css" href="CSS/zhuanyi.css"/>
+		<script src="JS/mTween.js" type="text/javascript" charset="utf-8"></script>
+		<script src="JS/tween.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="left">
+			<p></p>
+			<span></span>
+		</div>
+		<div id="center">
+			<div id="toright">
+			</div>
+			<div id="toleft">
+			</div>
+			<div id="i"><div></div><div></div></div>
+		</div>
+		<div id="right">
+			<p></p>
+			<span></span>
+		</div>
+		<script type="text/javascript">
+			var left = document.getElementById('left').getElementsByTagName('p')[0];
+			var right = document.getElementById('right').getElementsByTagName('p')[0];
+			var span = document.getElementsByTagName('span');
+			var toright = document.getElementById('toright');
+			var toleft = document.getElementById('toleft');
+			var numleft = document.getElementsByTagName('span')[0];
+			var numright = document.getElementsByTagName('span')[1];
+			var ibox = document.getElementById('i')
+			var str = '拍碎双玉斗，慷慨一何多。满腔都是血泪，无处着悲歌。三百年来王气，满目山河依旧，人事竟如何？百户尚牛酒，四塞已干戈。千金剑，万言策，两蹉跎。醉中呵壁自语，醒后一滂沱。不恨年华去也，只恐少年心事，强半为销磨。愿替众生病，稽首礼维摩。';
+			var strleft = str;
+			var	strright = '';
+			var onOff = true;
+			var num = 0;
+			//初始化
+			left.innerHTML += str;
+			numleft.innerHTML = strleft.length+'/'+ str.length
+			numright.innerHTML = strright.length+'/'+ str.length
+			//当点击上方按钮的时候
+			toright.onclick = function(){
+				if(!onOff){//onOff为false就停止继续运行
+					return;
+				}
+				if(left.innerHTML==''){//当左侧没有内容时
+					alert('左侧没有内容');
+					return;
+				}
+				onOff = false;
+				var tortext = setInterval(function(){
+				//右部文字开始生成
+					strright += strleft.substring(0,1);
+					right.innerHTML = strright;
+				//左部文字开始减少
+					strleft = strleft.substring(1);
+					left.innerHTML = strleft;
+				//右下角监控字数
+					numleft.innerHTML = strleft.length+'/'+str.length
+					numright.innerHTML =strright.length+'/'+str.length
+				//点击时转动I标
+					num++
+					ibox.style.transform = 'rotate('+50*num%360+'deg)';
+					if(left.innerHTML==''){
+						onOff = true;
+						clearInterval(tortext);
+					}
+				}, 100);
+			}
+			//当点击下方按钮的时候
+			toleft.onclick = function(){
+				if(!onOff){//onOff为false就停止继续运行
+					return;
+				}
+				if(right.innerHTML==''){//当右侧没有内容时
+					alert('右侧没有内容');
+					return;
+				}
+				onOff = false;
+				var toltext = setInterval(function(){
+				//左部文字开始生成
+					strleft += strright.substring(0,1);
+					left.innerHTML = strleft;
+				//右部文字开始减少
+					strright = strright.substring(1);
+					right.innerHTML = strright;
+				//右下角监控字数
+					numleft.innerHTML = strleft.length+'/'+str.length
+					numright.innerHTML =strright.length+'/'+str.length
+				//点击时转动I标
+					num++
+					ibox.style.transform = 'rotate('+50*num%360+'deg)';
+					if(right.innerHTML==''){
+						onOff = true;
+						clearInterval(toltext);
+					}
+				}, 100);
+			}
+			
+				
+			
+		</script>
+	</body>
+</html>

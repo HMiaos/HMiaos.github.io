@@ -1,0 +1,37 @@
+h1{
+	float: none;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+#support{
+	float: none;
+	margin: 0 auto;
+}
+.content_head{
+	border: none;
+	border-radius: 0;
+	background: none;
+	box-shadow:none;
+}
+.content_head ul{
+	float: none;
+	width: 100%;
+	padding: 10px 0 0 0;
+}
+.content_head li a{
+	padding: 0 4px 0 0;
+	font-size: 14px;
+}
+.content_head form{
+	float: none;
+	width: 100%;
+	height: 27px;
+}
+.constrain ul{
+	display: block;
+}
+.constrain li{
+	float: none;
+	width: 100%;
+	margin-bottom: 10px;
+}

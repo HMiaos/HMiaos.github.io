@@ -1,0 +1,100 @@
+/*样式重置*/
+body,dl,dd,p,h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	font-size: 12px;
+}
+ol,ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+img{
+	border:none;
+	vertical-align: top;
+}
+table{
+	border-collapse:collapse;
+}
+th,td{
+	padding:0;
+}
+th,td{
+	width:100px;
+	height:100px;
+}
+input{
+	padding: 0;
+	margin: 0;
+}
+i{
+	margin: 0 5px;
+	font-style: normal;
+	font-size: 12px;
+}
+
+/*常用工具*/
+.clearFix:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.mauto{
+	margin: 0 auto;
+}
+
+/*样式*/
+#box{
+	margin-top: 50px;
+	width: 490px;
+	height: 230px;
+	border: 2px solid #000000;
+	padding: 5px;
+}
+
+p{
+	height: 26px;
+	margin: 2px 0;
+	font: 16px/26px "微软雅黑";
+}
+p input{
+	width: 26px;
+	height: 26px;
+	text-align: center;
+	font-size: 20px;
+}
+.ptext{
+	padding-left: 15px;
+}
+.psum{
+	padding-left: 10px;
+	color: blue;
+}
+i{
+	display: inline-block;
+	width: 15px;
+	text-align: center;
+}
+#goods{
+	color: red;
+}
+#money{
+	color: #00008B;
+}
+
+.name{
+	display: inline-block;
+	width: 60px;
+	text-align: center;
+}
+#maxmoney{
+	color: orangered;
+}

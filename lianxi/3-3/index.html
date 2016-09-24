@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>全选</title>
+		<link rel="stylesheet" type="text/css" href="CSS/quanxuan.css"/>
+	</head>
+	<body>
+		<ul id="box" class="mauto">
+			<li><input type="checkbox" class="hh"/><span>1</span></li>
+			<li><input type="checkbox" class="hh"/><span>2</span></li>
+			<li><input type="checkbox" class="hh"/><span>3</span></li>
+			<li><input type="checkbox" class="hh"/><span>4</span></li>
+			<li><input type="checkbox" class="hh"/><span>5</span></li>
+		</ul>
+		<p>
+				<input id="operate" type="checkbox" />全选
+				<input type="button" value="反选" id="fanxuan"/>
+				<input type="button" value="删除" id="shanchu"/>
+		</p>
+		<script>
+			var box = document.getElementById('box');
+			var lis = box.getElementsByTagName('li');
+			var operate = document.getElementById('operate');
+			var inputs = document.getElementsByClassName('hh');
+			var fanxuan = document.getElementById('fanxuan');
+			var shanchu = document.getElementById('shanchu');
+			//当input被改变时的函数 形参
+			function fn(id){
+				var input = lis[id].getElementsByTagName('input')[0];
+				input.onchange=function(){
+					if(this.checked){
+						lis[id].style.background='#ffb515';
+						lis[id].style.border = '2px solid #000'
+					}else{
+						lis[id].style.background='';
+						lis[id].style.border = '2px solid #fff'
+					}
+					
+					operate.checked =  hm();
+				}
+			}
+			function hm(){
+				for(var i=0;i<inputs.length;i++){
+					if(!inputs[i].checked){
+						return false;
+					}	
+				}
+				return true;
+			}
+			//FOR循环套函数
+			for(var i=0;i<lis.length;i++){
+				//隔行变色。
+				if(i%2){
+					lis[i].className='yellow'
+				}else{
+					lis[i].className='red';
+				}
+				//套用函数
+				fn(i)
+			}
+			//全选按钮
+			operate.onchange = function(){
+				if(operate.checked){
+					for(var i=0;i<lis.length;i++){
+						lis[i].style.background='#ffb515';
+						lis[i].style.border = '2px solid #000'
+						inputs[i].checked = true;
+					}
+				}else{
+					for(var i=0;i<lis.length;i++){
+						lis[i].style.background='';
+						lis[i].style.border = '2px solid #fff'
+						inputs[i].checked = false;
+					}
+				}
+			}
+			//反选按钮
+			fanxuan.onclick = function(){
+				for(var i=0;i<lis.length;i++){
+					if(inputs[i].checked){
+						inputs[i].checked = false;
+						lis[i].style.background='';
+						lis[i].style.border = '2px solid #fff';
+					}else{
+						lis[i].style.background='#ffb515';
+						lis[i].style.border = '2px solid #000';
+						inputs[i].checked = true;
+					}
+				}
+				//反选重置全选按钮选项值
+				hm()
+				operate.checked =  hm();
+			}
+			//删除按钮
+			shanchu.onclick = function(){
+				for(var i=0;i<lis.length;i++){
+					if(inputs[i].checked){
+						lis[i].style.display = 'none';
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

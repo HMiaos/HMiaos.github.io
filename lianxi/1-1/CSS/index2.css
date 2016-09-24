@@ -1,0 +1,68 @@
+.top_ul1{
+	display: none;
+}
+.top_ul2{
+	float: left;
+	margin-left: 20px;
+}
+.introduce2{
+	float: none;
+	width: 100%;
+	padding: 0;
+	margin-bottom: 10px;
+}
+
+.introduce2_img{
+	height: 64px;
+}
+.introduce ul{
+	float: none;
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.introduce ul li{
+	float: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.box1_fl{
+	float: none;
+	width: 100%;
+}
+.box1_fl_ul li{
+	float: none;
+	width: 100%;
+	padding: 5px 0;
+}
+.project_title li{
+	float: none;
+	width: 100%;
+}
+
+
+.box1_fr{
+	float: none;
+	width: 100%
+}
+.box1_fr h4{
+	padding: 0;
+}
+.box1_fr ul{
+	padding: 0;
+}
+.JQery_img{
+	padding: 0;
+	width: 40%;
+}
+.footi{
+	float: none;
+	width: 100%;
+}
+.foottext{
+	float: none;
+	width: 100%;
+	text-align: center;
+}

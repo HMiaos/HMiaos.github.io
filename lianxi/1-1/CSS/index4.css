@@ -1,0 +1,10 @@
+#top{
+	display: none;
+}
+.content_head ul{
+	display: none;
+}
+.content_head_se{
+	display: block;
+	width: 100%;
+}			

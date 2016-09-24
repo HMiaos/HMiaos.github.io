@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>闹钟3</title>
+		<link rel="stylesheet" type="text/css" href="CSS/naozhong2.css"/>
+		<script type="text/javascript" src="JS/tween.js"></script>
+		<script type="text/javascript" src="JS/mTween.js"></script>
+	</head>
+	<body>
+		<ul id="box">
+			<li class="time">
+				<div>
+					<img src="img/0.jpg" alt="" class="show"/>
+				</div>
+			</li>
+			<li class="time">
+				<div>
+					<img src="img/0.jpg" alt="" class="show"/>
+				</div>
+			</li>
+			<li>
+				<img src="img/c.jpg" alt=""/>
+			</li>
+			<li class="time">
+				<div>
+					<img src="img/0.jpg" alt="" class="show"/>
+				</div>
+			</li>
+			<li class="time">
+				<div>
+					<img src="img/0.jpg" alt="" class="show"/>
+				</div>
+			</li>
+			<li>
+				<img src="img/c.jpg" alt=""/>
+			</li>
+			<li class="time">
+				<div>
+					<img src="img/0.jpg" alt="" class="show"/>
+				</div>
+			</li>
+			<li class="time">
+				<div>
+					<img src="img/0.jpg" alt="" class="show"/>
+				</div>
+			</li>
+		</ul>
+		<script type="text/javascript">
+			var lis = document.getElementsByTagName('li');
+			var divs = document.getElementsByTagName('div');
+			var imgs = document.querySelectorAll('div img');
+			var imgs2 = document.querySelectorAll('li>img');
+			var day = new Date();
+			var h = day.getHours();
+			var m = day.getMinutes();
+			var s = day.getSeconds();
+			var time = zero(h)+zero(m)+zero(s);
+			var hm = time;
+			
+			//循环套LEFT属性
+			for(var i=0;i<lis.length;i++){
+				lis[i].style.left = i*50+'px'
+			}
+			//补0函数
+			function zero(n){
+				return n<10? '0'+n:''+n;
+			}
+			//获取补零后时间数值的times函数
+			function hmtime(){
+			//根据时间切换图片
+				for(var i=0;i<imgs.length;i++){
+					imgs[i].src = 'img/'+time[i]+'.jpg';
+				}
+			}
+			//调用一次函数用来做初始时间值
+			hmtime();
+			
+			
+//		setInterval(
+//			
+//			1000
+//		)
+			
+		//传参（如果时间和上一秒的第Id个数字不同的话）改变其img属性
+		function changetime(id){
+			if(time[id]!=hm[id]){
+				mTween(divs[id],'width',0,300,'linear',function(){
+					mTween(divs[id],'width',50,300,'linear')
+					imgs[id].src = 'img/'+time[id]+'.jpg';
+				});
+				mTween(divs[id],'left',25,300,'linear',function(){
+					mTween(divs[id],'left',0,300,'linear')
+				})
+			}
+		}
+		//定时器
+		setInterval(function(){
+			//点的闪烁
+			//每1秒重复一次冒号显示的循环
+			for(var i=0;i<imgs2.length;i++){
+				imgs2[i].src = 'img/c.jpg';
+			}
+		//在每一秒冒号显示的循环里，循环一次冒号不显示
+			setTimeout(function(){
+				for(var i=0;i<imgs2.length;i++){
+					imgs2[i].src = 'img/b.jpg';
+				}
+			}, 500)
+			
+			//时间图
+			date = new Date();
+			h = date.getHours();
+			m = date.getMinutes();
+			s = date.getSeconds();
+			time = zero(h)+zero(m)+zero(s);
+			for(var i=0;i<imgs.length;i++){
+					changetime(i);
+			}
+			hm= time;
+		}, 1000)
+		</script>
+		
+	</body>
+</html>
+

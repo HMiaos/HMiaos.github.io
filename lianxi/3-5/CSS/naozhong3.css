@@ -1,0 +1,112 @@
+/*样式重置*/
+body,dl,dd,p,h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	font-size: 12px;
+}
+ol,ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+img{
+	border:none;
+	vertical-align: top;
+}
+table{
+	border-collapse:collapse;
+}
+th,td{
+	padding:0;
+}
+th,td{
+	width:100px;
+	height:100px;
+}
+input{
+	padding: 0;
+	margin: 0;
+}
+i{
+	margin: 0 5px;
+	font-style: normal;
+	font-size: 12px;
+}
+
+/*常用工具*/
+.clearFix:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.mauto{
+	margin: 0 auto;
+}
+.position{
+	position: relative;
+}
+
+/*样式*/
+ul{
+	width: 50px;
+	height: 70px;
+	margin: 200px auto;
+	position: relative;
+	transform-style:preserve-3d ;
+}
+.motion{
+	animation: move 1s linear infinite;
+}
+li{
+	width: 50px;
+	height: 70px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+ul li:nth-of-type(1){
+	transform: rotateX(0deg) translateZ(150px);
+}
+ul li:nth-of-type(2){
+	transform: rotateX(36deg) translateZ(150px);
+}
+ul li:nth-of-type(3){
+	transform: rotateX(72deg) translateZ(150px);
+}
+ul li:nth-of-type(4){
+	transform: rotateX(108deg) translateZ(150px);
+}
+ul li:nth-of-type(5){
+	transform: rotateX(144deg) translateZ(150px);
+}
+ul li:nth-of-type(6){
+	transform: rotateX(180deg) translateZ(150px);
+}
+ul li:nth-of-type(7){
+	transform: rotateX(216deg) translateZ(150px);
+}
+ul li:nth-of-type(8){
+	transform: rotateX(252deg) translateZ(150px);
+}
+ul li:nth-of-type(9){
+	transform: rotateX(288deg) translateZ(150px);
+}
+ul li:nth-of-type(10){
+	transform: rotateX(324deg) translateZ(150px);
+}
+@keyframes move{
+				0%{
+					transform: rotateX(0deg)
+				}
+				100%{
+					transform: rotateX(-36deg)
+				}
+			}

@@ -141,7 +141,7 @@ aside a:hover p{
 }
 .boxhead p:nth-of-type(2){
 	display: inline-block;
-	margin: 10px auto;
+	margin: 3px auto;
 	font-family: "allerbold";
     font-weight: bold;
     color: #f00;
@@ -171,7 +171,7 @@ aside a:hover p{
 }
 #box2 p{
 	font: 18px/24px "微软雅黑";
-	margin: 10px 0 20px;
+	margin: 15px 0 2px;
 	
 }
 
@@ -186,7 +186,7 @@ aside a:hover p{
 	padding: 20px;
 }
 #production ul{
-	width: 1200px;
+	width: 1000px;
 	margin: 10px auto;
 	padding: 100px 0 0 0;
 	display: flex;
@@ -226,22 +226,22 @@ aside a:hover p{
 }
 #experience{
 	position: relative;
-	width: 1200px;
+	width: 1000px;
 	margin: 10px auto;
 	height: 450px;
 }
 #experiencehead{
-	width: 1200px;
+	width: 1000px;
 	height: 90px;
 }
 .level{
-	width: 299px;
+	width: 249px;
 	height: 90px;
 	float: left;
 	border-bottom: 2px solid #000;
 }
 .active{
-	width: 299px;
+	width: 249px;
 	height: 88px;
 	border: 2px solid #000;
 	border-radius: 5px;
@@ -262,17 +262,37 @@ aside a:hover p{
 
 #experiencebody{
 	height: 360px;
-	width: 1200px;
+	width: 1000px;
 	position: relative;
 }
 .experiencebody{
 	display: none;
 	height: 360px;
-	width: 1200px;
+	width: 1000px;
 	position: absolute;
 	top: 0;
 	left: 0;
 }
+.experiencebody li{
+	float: left;
+	width: 250px;
+	height: 100px;
+	margin: 20px;
+}
+.experiencebody li a{
+	font:bold 30px/100px "楷体";
+	text-align: center;
+	display: block;
+	width: 100%;
+	border: 1px solid;
+	height: 100%;
+	margin: 20px;
+}
+.experiencebody img{
+	width: 100%;
+	height: 100%;
+}
+
 
 .show{
 	display: block;

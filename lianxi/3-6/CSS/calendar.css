@@ -1,0 +1,201 @@
+/*样式重置*/
+body,dl,dd,p,h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	font-size: 12px;
+}
+ol,ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+img{
+	border:none;
+	vertical-align: top;
+}
+table{
+	border-collapse:collapse;
+}
+th,td{
+	padding:0;
+}
+th,td{
+	width:100px;
+	height:100px;
+}
+input{
+	padding: 0;
+	margin: 0;
+}
+i{
+	margin: 0 5px;
+	font-style: normal;
+	font-size: 12px;
+}
+
+/*常用工具*/
+.clearFix:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.mauto{
+	margin: 0 auto;
+}
+.position{
+	position: relative;
+}
+
+/*样式*/
+#box{
+	width: 536px;
+	height: 366px;
+	border: 2px solid #57abff;
+	margin: 100px auto;
+}
+#weeks .red{
+	color: red;
+}
+#everyDay .old{
+	color: #bfbfbf;
+}
+#everyDay .active{
+	border: 2px solid cornflowerblue;
+	background: #ffbb00;
+}
+/*BOX左半部分*/
+#bleft{
+	width: 385px;
+	height: 345px;
+	padding: 10px;
+	float: left;
+	background-size: 100% 100%;
+}
+#control{
+	height: 26px;
+}
+#upper{
+	width: 35%;
+	height: 26px;
+	border-radius: 5px;
+	float: left;
+	text-align: center;
+	font: 24px/26px "微软雅黑";
+	color: #fff;
+}
+#prevMonth{
+	margin-left: 20px;
+	display: inline-block;
+	height: 26px;
+	font: 12px/26px "微软雅黑";
+	color: #B2B2B2;
+}
+#nextMonth{
+	margin-left: 10px;
+	display: inline-block;
+	height: 26px;
+	font: 12px/26px "微软雅黑";
+	color: dodgerblue;
+}
+#begin{
+	padding-top: 5px;
+	margin-left: 30px;
+	height: 20px;
+	display: inline-block;
+	font: 12px/20px "微软雅黑";
+	color: darkgoldenrod;
+}
+#weeks{
+	width: 385px;
+	height: 34px;
+	margin-top: 10px;
+}
+#weeks a{
+	display: block;
+	float: left;
+	width: 55px;
+	height: 34px;
+	text-align: center;
+	font: 20px/34px "楷体";
+	border-top: 1px solid #c8cacc;
+	color: #000;
+}
+#everyDay{
+	width: 385px;
+	height: 282px;
+}
+#everyDay a{
+	display: inline-block;
+	width: 51px;
+	height: 43px;
+	text-align: center;
+	border: 2px solid #fff;
+	font: 20px/47px "黑体";
+	color: #000000;
+}
+#everyDay a:hover{
+	border: 2px solid orangered;
+}
+/*BOX右半部分*/
+#bright{
+	width: 130px;
+	height: 368px;
+	float: right;
+	background: #58abff;
+}
+#date{
+	width: 100%;
+	height: 48px;
+	color: #fff;
+	font-size: 13px;
+	word-wrap: break-word;
+	line-height: 48px;
+	text-align: center;
+}
+#tody{
+	width: 75px;
+	height: 75px;
+	margin: 0 auto;
+	text-align: center;
+	border-radius: 5px;
+	color: #fff;
+	line-height: 76px;
+	font-size: 52px;
+	background: #fb0;
+	box-shadow: 1px 2px 5px rgba(0,0,0,.1),-1px 2px 5px rgba(0,0,0,.1);
+}
+#lunar{
+	width: 120px;
+	margin: 0 auto;
+	height: 60px;
+	padding-bottom: 20px;
+	border-bottom: 2px solid  #94c9ff;
+	border-radius: 0 0 2px 2px;
+}
+#lunar p{
+	height: 20px;
+	font: 12px/20px "微软雅黑";
+	text-align: center;
+	color: #fff;
+}
+#lunar #time{
+	font: 20px/20px "微软雅黑";
+}
+
+/*特殊效果*/
+/*变色*/
+.orangellow.button { background-color: #ffb515; }
+.orangellow.button { -webkit-animation: orangellowin 3s infinite}
+@-webkit-keyframes orangellowin{
+		  from { background-color: #fc9200; -webkit-box-shadow: 0 0 9px #333; }
+		  50% { background-color: #ffb515; -webkit-box-shadow: 0 0 18px #ffb515; }
+		  to { background-color: #fc9200; -webkit-box-shadow: 0 0 9px #333; }
+		}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.clearFix:after{
+				content: "";
+				clear: both;
+				display: block;
+			}
+			.fl{
+				float: left;
+			}
+			.fr{
+				float: right;
+			}
+			a{
+				text-decoration:none;
+			}
+			ol,ul{
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			#body{
+				width: 100%;
+				height: 1000px;
+				position: relative;
+			}
+			#yy{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 1000px;
+				z-index: 10;
+				background: #000;
+				opacity: .5;
+				display: none;
+			}
+			.box1{
+				width: 450px;
+				margin: 20px;
+			}
+			.ss{
+				font: 26px/40px "微软雅黑";;
+			}
+			.sz{
+				background: red;
+				width: 100px;
+				height: 40px;
+				position: relative;
+			}
+			#sz{
+				display: inline-block;
+				width: 100px;
+				height: 40px;
+				color: #fff;
+				font: 12px/40px "微软雅黑";
+				text-align: center;
+			}
+			#szt{
+				position: absolute;
+				top: 100px;
+				left: 50px;
+				z-index: 20;
+				width: 500px;
+				height: 300px;
+				border: 20px solid #B2B2B2;
+				display: none;
+				background: #fff;
+			}
+			.red{
+				background: lawngreen;
+			}
+			.red:hover{
+				background: red;
+			}
+			.yellow{
+				background: darkorange;
+			}
+			.yellow:hover{
+				background: yellow;
+			}
+			.blue{
+				background: dodgerblue;
+			}
+			.blue:hover{
+				background: blue;
+			}
+			#szt ul{
+				margin: 20px 40px;
+			}
+			#szt ul li{
+				height: 70px;
+			}
+			li p{
+				width: 150px;
+				font-weight: bold;
+			}
+			li div{
+				width: 48px;
+				height: 48px;
+				text-align: center;
+				font: 25px/50px "微软雅黑";
+				margin: 0 20px;
+				background: #b2b2b2;
+				border: 1px solid #000;
+			}
+			li div:hover{
+				background: #66512C;
+			}
+			.confirm{
+				width: 200px;
+				margin: 0 auto;
+				
+			}
+			.confirm a{
+				font: 25px/50px "微软雅黑";
+				color: #000;
+			}
+			.blue1{
+				background: #0066CC;
+				width: 80px;
+				text-align: center;
+			}
+			#target{
+				width: 100px;
+				height: 100px;
+				border: 5px solid #000;
+				margin-left: 20px;
+				background: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="body">
+			<div id="yy"></div>
+			<div class="box1 clearFix">
+				<div class="ss fl">请为下面的DIV设置样式：</div>
+				<div class="sz fr">
+					<a href="#" id="sz">点击设置</a>
+					<div id="szt">
+						<ul>
+							<li class="clearFix">
+								<p class="fl">请选择背景色:</p>
+								<div class="red fl" id="red">红</div>
+								<div class="yellow fl" id="yellow">黄</div>
+								<div class="blue fl" id="blue">蓝</div>
+							</li>
+							<li class="clearFix">
+								<p class="fl">请选择宽（px）:</p>
+								<div class="fl" id="width1">200</div>
+								<div class="fl" id="width2">300</div>
+								<div class="fl" id="width3">400</div>
+							</li>
+							<li class="clearFix">
+								<p class="fl">请选择高（px）:</p>
+								<div class="fl" id="height1">200</div>
+								<div class="fl" id="height2">300</div>
+								<div class="fl" id="height3">400</div>
+							</li>
+						</ul>
+						<div class="confirm clearFix">
+							<div id="recover" class="fl blue1"><a href="#">恢复</a></div>
+							<div id="confirm" class="fr blue1"><a href="#">确定</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div ID="target">
+				
+			</div>
+		</div>
+		<script type="text/javascript">
+			document.getElementById('sz').onclick = function(){
+						document.getElementById('szt').style.display='block';
+						document.getElementById('yy').style.display='block';
+			};
+			document.getElementById('confirm').onclick = function(){
+				document.getElementById('szt').style.display='none';
+				document.getElementById('yy').style.display='none';
+			};
+			var target = document.getElementById('target');
+			document.getElementById('red').onclick = function(){
+				target.style.background='red';
+			};
+			document.getElementById('yellow').onclick = function(){
+				target.style.background='yellow';
+			};
+			document.getElementById('blue').onclick = function(){
+				target.style.background='blue';
+			};
+			document.getElementById('width1').onclick = function(){
+				target.style.width='200px';
+			};
+			document.getElementById('width2').onclick = function(){
+				target.style.width='300px';
+			};
+			document.getElementById('width3').onclick = function(){
+				target.style.width='400px';
+			};
+			document.getElementById('height1').onclick = function(){
+				target.style.height='200px';
+			};
+			document.getElementById('height2').onclick = function(){
+				target.style.height='300px';
+			};
+			document.getElementById('height3').onclick = function(){
+				target.style.height='400px';
+			};
+			document.getElementById('recover').onclick = function(){
+				target.style.background='#fff';
+				target.style.width='100px';
+				target.style.height='100px';
+			};
+		</script>
+	</body>
+</html>

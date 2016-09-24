@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>QQ</title>
+		<link rel="stylesheet" type="text/css" href="CSS/qq.css"/>
+	</head>
+	<body>
+		<div id="box" class="mauto">
+			<ul id="boss">
+				<li id="list1" class="li1">我的好友
+					<h2 id="h21"><a href="javascript: ;">我的好友</a></h2>
+					<ol>
+						<li class="li2">张三</li>
+						<li class="li2">李四</li>
+						<li class="li2">王麻子</li>
+					</ol>
+				</li>
+				<li id="list2" class="li1">企业好友
+					<h2 id="h22"><a href="javascript: ;">企业好友</a></h2>
+					<ol>
+						<li class="li2">D.va</li>
+						<li class="li2">源氏</li>
+						<li class="li2">死神</li>
+						<li class="li2">黑寡妇</li>	
+					</ol>
+				</li>
+				<li id="list3" class="li1">黑名单
+					<h2 id="h23"><a href="javascript: ;">黑名单</a></h2>
+					<ol>
+						<li class="li2">路霸</li>
+						<li class="li2">堡垒</li>
+						<li class="li2">麦克雷</li>
+					</ol>
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			var lis = document.getElementsByClassName('li1');
+			var h2s = document.getElementsByTagName('h2');
+			var as = document.getElementsByTagName('a');
+			var ols = document.getElementsByTagName('ol'); 
+			var liis = document.getElementsByClassName('li2'); 
+			
+			for(var i=0;i<as.length;i++){
+				as[i].leo = i;
+				as[i].onoff = true ;
+				as[i].onclick = function(){
+					if(this.onoff){
+						for(var i=0;i<as.length;i++){
+							as[i].className='';
+							h2s[i].className=''
+							ols[i].style.display = '';
+							as[i].onoff = true ;
+						}
+						this.className='back1';
+						h2s[this.leo].className='back2';
+						ols[this.leo].style.display = 'block';
+						this.onoff = false ;
+					}else{
+						for(var i=0;i<as.length;i++){
+							as[i].className='';
+							h2s[i].className=''
+							ols[i].style.display = '';
+							as[i].onoff = true ;
+						}
+					}
+				}
+			}
+			for(var i=0;i<liis.length;i++){
+				liis[i].onclick = function(){
+					for(var i=0;i<liis.length;i++){
+						liis[i].className='li2';
+					}
+					this.className ='li2 back3';
+				}
+			}
+				
+			
+			
+			
+		</script>
+	</body>
+</html>

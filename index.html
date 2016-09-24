@@ -120,18 +120,18 @@
 						</li>
 						<li>
 							<h3>静态页面</h2>
-							<a href=""><img src="img/xiangmu-2.png" alt="" /></a>
+							<a href="1-aiqiyipc/aiqiyipc.html"><img src="img/xiangmu-2.png" alt="" /></a>
 							<p>爱奇艺的一个静态页面</p>
 						</li>
 						<li>
 							<h3>小游戏</h2>
-							<a href=""><img src="img/xiangmu3.png" alt="" /></a>
+							<a href="2-plan/index.html"><img src="img/xiangmu3.png" alt="" /></a>
 							<p>一个自制的简易版小游戏</p>
 						</li>
 						<li>
-							<h3>酷简历</h2>
-							<a href=""><img src="" alt="" /></a>
-							<p>一个酷炫的简历模板</p>
+							<h3>微信小游戏</h2>
+							<a href="3-phoneplane/index.html"><img src="img/xiangmu4.png" alt="" /></a>
+							<p>方知微信手机版飞机小游戏</p>
 						</li>
 					</ul>
 				</div>
@@ -142,13 +142,7 @@
 					<p>· Introduce Me ·</p>
 				</div>
 				<div id="box5text">
-					<p class="sizscolor">团队意识很强，效率快，处女座胖子，不会文艺假装冷艳时而小清新时而屌丝，脑回路奇葩。</p>
-					<p class="sizscolor">能力侧重于功能性产品交互方向，视觉绘画偏弱，爱好颇多</p>
-					<p class="sizscolor">感性中不缺乏理性， 喜欢简单的人简单的事，相信美好， 对生活充满希望。</p>
-					<p class="sizscolor">对待生活和现实比较达观，并不消极悲观，或许有些幼稚乐观，但一直保持自我的真性情。</p>
-					<p class="sizscolor">不会被繁琐的事物所误导，不轻易从众， 有自己独立的思想和见解。</p>
-					<p class="sizscolor">穿棉布衣服，带着书和思想行走， 吃一写干净的食物，当然还很爱吃肉和蛋糕。</p>
-					<p class="sizscolor">注天气和人，随性的生活着， 享受时光里每一分每一秒，找到最真实的存在感，热爱生活。</p>
+					<p>文本</p>
 				</div>
 				<img src="img/pangzi-1.png"/>
 			</div>
@@ -165,7 +159,19 @@
 						<div class="level"><img src="img/levelIV.png" alt="" /></div>
 					</div>
 					<div id="experiencebody">
-						<div class="experiencebody show">1111</div>
+						<div class="experiencebody show">
+							<!--<ul>
+								<li>
+									<a href="lianxi/1-1/index.html">123</a>
+								</li>
+								<li>
+									<a href="lianxi/1-1/index.html">123</a>
+								</li>
+								<li>
+									<a href="lianxi/1-1/index.html">123</a>
+								</li>
+							</ul>-->
+						</div>
 						<div class="experiencebody">2222</div>
 						<div class="experiencebody">3333</div>
 						<div class="experiencebody">4444</div>
@@ -229,6 +235,7 @@
 		
 		//点击top右侧标签时
 			$('#anchor li a').click(function(){
+				num = $('#anchor li a').index(this);
 //				$('#box').css('top',document.body.clientHeight*(i+1)+'px')
 				$('#box')[0].style.top = -$('#box1')[0].offsetHeight*$('#anchor li a').index(this)+'px';
 				$('aside a').attr("class", "")
@@ -236,6 +243,7 @@
 			})
 		//点击侧边栏时
 			$('aside a').click(function(){
+				num = $('aside a').index(this);
 				$('aside a').attr("class", "")
 				this.className = "asselect";
 				$('#box').animate({
@@ -260,11 +268,45 @@
 			this.className = '';
 			$('#production li p').eq($('#production li').index(this)).css("display","")
 		})
-		/*box4*/
+		
+		
+		/*box4 学习经历*/
 		$('.level').click(function(){
 		$('.level').removeClass('active').filter(this).addClass('active');
 			$('.experiencebody').hide().eq($(this).index()).show();
 		});
+		for(var i=0;i<4;i++){
+			$('.experiencebody').eq(i).html("<ul>"+hm()+"</ul>");
+		}
+		
+		function hm(){
+			var h="";
+			for(var j=0;j<6;j++){
+				h+= '<li><a href="lianxi/'+(i+1)+"-"+(j+1)+'/index.html"></a></li>'
+				
+			}
+			return h;
+		}
+		
+		var experiencebodycolor=["#4da4fc","#91e162","#584dfb","#4dd8fc"]
+		for(var i=0;i<$('.experiencebody').length;i++){
+			$('.experiencebody').eq(i).children().children().children().css("borderColor",experiencebodycolor[i]);
+			$('.experiencebody').eq(i).children().children().children().css("color",experiencebodycolor[i]);
+		}
+		var bodyhtml = ["普通响应式联系","设置Div样式","模拟手机发送","自动生成100个Div","图片切换","生成V字形","模拟QQ菜单","生成相册","相册浏览","指向显示","商品计价","模拟QQ登录","评分","评星","全选","淘宝广告","时钟","日历","查找替换","文字转移","拖动","search、hash","框选","滚动条"]
+		for(var i=0;i<$('.experiencebody a').length;i++){
+			$('.experiencebody a').eq(i)[0].innerHTML = bodyhtml[i];
+		}
+		$('.experiencebody a').mouseover(function(){
+			var hm = this.style.color;
+			this.style.color = 'red';
+			$('.experiencebody a').mouseleave(function(){
+				this.style.color = hm;
+			})
+		})
+		
+		
+		
 		
 		/*鼠标滚轮*/
 		var num =0

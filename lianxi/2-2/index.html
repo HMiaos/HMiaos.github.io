@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>缩略图</title>
+		<link rel="stylesheet" href="css/slt.css" />
+	</head>
+	<body>
+		<div id="input">
+			<input type="number" name="quan" id="input1"  min="1" max="9" placeholder="选择图片数（1~9）"/>
+			<input type="button" name="quan" id="input2" value="生成" />
+		</div>
+		
+		<div id="box">
+			<img src="img/0.jpg" alt="" id="img"/>
+			<a href="javascript:;" id="prev"><</a>
+			<a href="javascript:;" id="next">></a>
+			<ul id="ul">
+				
+			</ul>
+			
+			
+		</div>
+		
+		<script type="text/javascript">
+			var input1 = document.getElementById('input1');
+			var input2 = document.getElementById('input2');
+			var box = document.getElementById('box');
+			var as = document.getElementsByTagName('a');
+			var img = document.getElementById('img');
+			var ul = document.getElementById('ul');
+			var num = '';
+			var str = '';
+			var hm = 0;
+			
+			//点击生成#box
+			input2.onclick = function(){
+				num = ~~input1.value;
+				hm = 0;
+				if(num<10){
+					if(num>=1){
+						//条件合适下开始生成#BOX
+						box.style.display='block';
+						//在#ul中生成 num个<li>.
+						str='';
+						ul.innerHTML = str;
+						for(i=0;i<num;i++){
+							var p = i+1;
+							str += '<li>'+p+'<div class='+'liimg'+'>'+'<img src="img/'+i+'.jpg" alt=""/>'+'</li>';
+						};
+						ul.innerHTML += str;
+						//直接点击焦点坐标
+						var lis = document.getElementsByTagName('li');
+						for(var i =0; i<num;i++){
+							lis[i].lcl = i;
+							lis[i].onclick = function(){
+								hm=this.lcl;
+								img.src='img/'+this.lcl+'.jpg';
+								for(var i = 0;i<num;i++){
+									lis[i].className='con2';
+								}
+								this.className='con'
+							}
+						}
+						//点击#next a标签
+						as[1].onclick = function(){
+							if(hm<num-1){
+								hm++
+							}else{
+								hm=0
+							}
+							img.src='img/'+hm+'.jpg';
+							for(var i = 0;i<num;i++){
+								lis[i].className='con2';
+							}
+							lis[hm].className= 'con';
+						}
+						
+					//点击#prev a标签	
+						as[0].onclick = function(){
+							if(hm>0){
+								hm--
+							}else{
+								hm=num-1
+							}
+							img.src='img/'+hm+'.jpg';
+							for(var i = 0;i<num;i++){
+								lis[i].className='con2';
+							}
+							lis[hm].className= 'con';
+						}
+					}else{
+			// 错误数字的情况
+						alert('484洒？');
+					};
+				}else{
+					alert('没那么多图');
+				};
+			
+
+				
+//					lis[i].onclick = function(){
+//						alert(1)
+//						img.src='img/'+hm+'.jpg';
+//						for(var i = 0;i<num;i++){
+//							lis[i].className='con2';
+//						}
+//						this.className= 'con';
+//				}
+			}
+				
+			
+			
+				
+		</script>
+	</body>
+</html>

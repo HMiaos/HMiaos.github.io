@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>查找替换</title>
+		<link rel="stylesheet" type="text/css" href="CSS/tihuan.css"/>
+	</head>
+	<body>
+		<div id="box">
+			<div id="top">
+				<div id="open">
+					打开
+				</div>
+				<div id="find" style="display: none;">
+					查找
+				</div>
+				<div id="replace" style="display: none;">
+					替换
+				</div>
+			</div>
+			<div id="content">
+				目前主要针对的是javascript培训，同时还提供了css教程、javascript视频、js特效等，最新推出了外地学员们喜欢的javascript网络课程服务，同时还为处于javascript入门阶段的朋友录制了大量javascript视频，其中涉及了大量javascript基础知识，希望妙味课堂推出的javascript网络培训课程能带给大家更多惊喜。目前主要针对的是javascript培训，同时还提供了css教程、javascript视频、js特效等，最新推出了外地学员们喜欢的javascript网络课程服务，同时还为处于javascript入门阶段的朋友录制了大量javascript视频，其中涉及了大量javascript基础知识，希望妙味课堂推出的javascript网络培训课程能带给大家更多惊喜。目前主要针对的是javascript培训，
+			</div>
+			<div id="operate">
+				<div id="optop">
+					<div id="findin">
+						查找
+						<div id="findinput">
+							<input type="text" name=""  value="" id="findinner"/>
+							<input type="button" name=""  value="查找" id="findput"/>
+						</div>
+					</div>
+					<div id="replacein">
+						替换
+						<div id="replaceinput" style="display: none">
+							<input type="text" name=""  value="" id="replaceinner"/>
+							<input type="text" name="" value="" id="replaceinner2"/>
+							<input type="button" name=""  value="替换" id="replaceput"/>
+						</div>
+					</div>
+					<div id="close">
+						X
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	
+	<script type="text/javascript">
+		var open = document.getElementById('open');
+		var find = document.getElementById('find');
+		var replace = document.getElementById('replace');
+		var onOff = true;
+		var operate = document.getElementById('operate');
+		var findin = document.getElementById('findin');
+		var replacein = document.getElementById('replacein');
+		var close = document.getElementById('close');
+		var findinput = document.getElementById('findinput');
+		var replaceinput = document.getElementById('replaceinput');
+		var findput = document.getElementById('findput');
+		var replaceput = document.getElementById('replaceput');
+		var str = content.innerHTML;
+		var hm;
+		//控制初始OPEN内的点击模块
+		open.onclick = function(){
+			if(onOff){
+				find.style.display = '';
+				replace.style.display = '';
+				onOff = false;
+			}else{
+				find.style.display = 'none';
+				replace.style.display = 'none';
+				onOff = true;
+			}
+		}
+		find.onclick = function(){
+			operate.style.display = 'block'
+			findin.style.background = 'red';
+			replacein.style.background = '';
+			findinput.style.display = 'block'
+			replaceinput.style.display = 'none'
+		}
+		replace.onclick = function(){
+			operate.style.display = 'block';
+			replacein.style.background = 'red';
+			findin.style.background = '';
+			replaceinput.style.display = 'block'
+			findinput.style.display = 'none'
+		}
+		findin.onclick = function(){
+			findin.style.background = 'red';
+			replacein.style.background = '';
+			findinput.style.display = 'block'
+			replaceinput.style.display = 'none'
+		}
+		replacein.onclick = function(){
+			replacein.style.background = 'red';
+			findin.style.background = '';
+			replaceinput.style.display = 'block'
+			findinput.style.display = 'none'
+		}
+		close.onclick = function(){
+			operate.style.display = ''
+		}
+		//当点击查找按钮的时候
+		findput.onclick = function(){
+			//先重置内容去掉之前的SPAN
+			content.innerHTML = str;
+			//如果输入内容不为空的话
+			if(findinner.value!==''){
+				hm = str.indexOf(findinner.value)
+				//当输入内容没有找到的时候
+				if(hm == -1){
+					alert("没有找到")
+					return;
+				}
+				//重置内容
+				var findtext = str.split(findinner.value).join('<span>'+findinner.value+'</span>');
+				content.innerHTML = findtext
+				//将替换的第一个INPUT的内容替换当前输入内容
+				replaceinner.value = findinner.value;
+			}else{
+				alert('不能为空')
+			}
+		}
+		//当点击替换那妞的时候
+		replaceput.onclick = function(){
+//			//先重置内容去掉之前的SPAN
+//			content.innerHTML = str;
+			//如果输入内容不为空的话
+			if(replaceinner.value!==''){
+				hm = str.indexOf(replaceinner.value)
+				//当输入内容没有找到的时候
+				if(hm == -1){
+					alert("没有找到")
+					return;
+				}
+				//重置内容
+				var replacetext = str.split(replaceinner.value).join('<span>'+replaceinner2.value+'</span>');
+				content.innerHTML = replacetext;
+				//保存这一次内容（不包括span标签）
+				str = str.split(replaceinner.value).join(replaceinner2.value)
+			}else{
+				alert('不能为空')
+			}
+		}
+	</script>
+</html>
