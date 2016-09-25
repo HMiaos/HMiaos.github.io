@@ -1,3 +1,10 @@
+
+body{
+	background: url(../img/bg.jpg) no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
 img{
 	width: 100%;
 	height: 100%;
@@ -24,6 +31,12 @@ color: #003333;
 	font: 30px/30px "宋体";
 	font-weight:  bold;
 	text-align: center;
+}
+#top .fr{
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding-right: 20px;
 }
 #hmportrait img{
 	margin-left: 10px;
@@ -93,12 +106,21 @@ aside a:hover p{
 .asselect{
 	background: url(../img/aside2.png) no-repeat center center;
 }
-
+#content{
+	width: 1000px;
+	height: 600px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
 #box{
-	width: 100%;
 	position: absolute;
 	top: 0;
 	left: 0;
+}
+#box>div{
+	width: 1000px;
+	height: 600px;
 }
 /*box1 首页*/
 #box1{
@@ -183,7 +205,7 @@ aside a:hover p{
 }
 
 #production{
-	padding: 20px;
+	padding: 20px 0;
 }
 #production ul{
 	width: 1000px;
@@ -195,11 +217,11 @@ aside a:hover p{
 	
 }
 #production li{
-	width: 200px;
-	height: 200px;
-	position: relative;
+	width: 190px;
+	height: 190px;
 	border: 5px solid #B2B2B2;
 	border-radius: 5px;
+	position: relative;
 }
 #production h3{
 	width: 200px;
