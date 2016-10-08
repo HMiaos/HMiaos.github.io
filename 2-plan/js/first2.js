@@ -78,7 +78,7 @@ $("#leftbox p").eq(2).html("本关通关目标：最少获得 <span style='color
 	var juimg = [["img/thefirstpass/juqing1.jpg","fl"],["img/thefirstpass/juqing0.jpg","fr"]]
 	$("#dialogue").html("<img class='fl' src="+juimg[0][0]+"/><div>"+juqing[0]+"</div>");
 	var juqingnum = 0;
-	document.onmousedown = function(){
+	$("#dialogue")[0].onmousedown = function(){
 		juqingnum++;
 		if(juqingnum == 18){
 			document.onmousedown = "";
