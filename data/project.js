@@ -16,10 +16,10 @@ var projects = [
 		{
 			projectName:"利用Bootstrap框架制作一个响应式页面”",
 			projectWebsite:"production/1-bootstrap/index.html",
-		    startTime:"2016.01.01",
-			endTime:"至今",
-			projectExplain:"JS整站开发之：整屏切换+动画制作神器“TweenMax库” 导航条和首屏出场动画、3D翻转实现、整屏切换，页面动画计算滚动条滚动距离， 拖动滚动条触发页面动画，完善每一屏内的图片翻转，缩小浏览器，做布局转换。",
-			projectLabel:["html","css3","css","js"],
+		    startTime:"",
+			endTime:"",
+			projectExplain:"利用bootstrap框架制作一个响应式页面,达到促进开发效率，便于维护；可以向用户提供友好的Web界面，可以适应几乎所有设备的屏幕。不过可能会造成加载时间加倍，不容易被搜索引擎确定关键字",
+			projectLabel:["html","css3","jQuery","Bootstrap"],
 			projectThumbnail:"images/production/1.jpg"
 		},
 		{
