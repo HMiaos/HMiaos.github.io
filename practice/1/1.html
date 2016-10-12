@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>面向对象选项卡</title>
+		<style>
+			#box>div,#box2>div{
+				width: 500px;
+				height: 300px;
+				display: none;
+				border: 2px solid red;
+			}
+			#box .show,#box2 .show{
+				display: block;
+			}
+			.active{
+				background :red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<input type="button" value="一" class="active"/>
+			<input type="button" value="二"/>
+			<input type="button" value="三"/>
+			<div class="show">111</div>
+			<div>222</div>
+			<div>333</div>
+		</div>
+		<div id="box2">
+			<input type="button" value="一" class="active"/>
+			<input type="button" value="二"/>
+			<input type="button" value="三"/>
+			<div class="show">111</div>
+			<div>222</div>
+			<div>333</div>
+		</div>
+	
+	<script type="text/javascript">
+		window.onload = function(){
+			var input1 = new Tab("box");
+			input1.init();
+			var input2 = new Tab("box2");
+			input2.init();
+		}
+		//Tab.prototype.init 不会预加载 所以这里不写window.onload的话会报错显示init不是一个函数
+		//也可以不写window.onload 但是需要把	window.onload = function里面的东西写在init下面，让浏览器顺序加载
+		function Tab(id){
+			this.aParent = document.getElementById(id);
+			this.aInput = this.aParent.getElementsByTagName("input");
+			this.aDiv = this.aParent.getElementsByTagName("div");
+		}
+		Tab.prototype.init = function(){
+			var That = this;
+			for(var i=0;i<this.aInput.length;i++){
+				this.aInput[i].index = i;
+				this.aInput[i].onclick = function(){
+					That.change(this);
+				}	
+			}
+		}
+		Tab.prototype.change = function(obj){
+			for(var i=0;i<this.aInput.length;i++){
+				this.aInput[i].className = '';
+				this.aDiv[i].className = '';
+			}
+			obj.className = 'active';
+			this.aDiv[obj.index].className = 'show';
+		}
+		/*
+		 先写出普通方法，然后改成面向对象写法
+		 	普通方法变形：
+		 	1尽量不出现函数嵌套函数
+		 	2可以有全局变量
+		 	3把onload中不是赋值的语句放到单独函数中
+		 	改成面向对象：
+		 	1全局变量就是属性
+		 	2函数就是方法
+		 	3Onload中创建对象
+		 	4修改This指向问题
+		 * */
+	</script>
+	</body>
+</html>

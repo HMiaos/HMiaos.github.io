@@ -60,16 +60,8 @@ var skills = {
 			]
 		},
 		{
-			skillLanguage:"bootstrap",
-			percent:"60%",
-			skillTooltip:[
-				"11111",
-				"11111"
-			]
-		},
-		{
 			skillLanguage:"canvas",
-			percent:"10%",
+			percent:"30%",
 			skillTooltip:[
 				"了解过相关接口绘制各类图形",
 				"尝试过canvas开发小游戏",
@@ -78,13 +70,13 @@ var skills = {
 			]
 		},
 		{
-			skillLanguage:"11111",
-			percent:"10%",
+			skillLanguage:"bootstrap",
+			percent:"80%",
 			skillTooltip:[
-				"11111",
-				"11111"
+				"了解Bootstrap框架",
+				"能够使用Bootstrap制作Web页面或Web应用程序",
+				"定制个性化Bootstrap"
 			]
 		}
-		
 	]
 }

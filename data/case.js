@@ -243,5 +243,23 @@ var casees = [
 
 				}
 			]
+		},{
+			caseName:"面向对象的方法",
+			caseList:[
+				{
+					caseTitle:"面向对象选项卡",
+					publishTime:"",
+					caseThumbnail:"",
+					caseDescription:"通过面向对象的方法完成的一个常见的选项卡",
+					caseWebsite:"practice/1/1.html"
+				},
+				{
+					caseTitle:"面向对象拖拽",
+					publishTime:"",
+					caseThumbnail:"",
+					caseDescription:"通过面向对象的方法完成的拖拽动作"
+					,caseWebsite:"practice/1/2.html"
+				}
+			]
 		}
 ]
