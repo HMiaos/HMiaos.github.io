@@ -1,25 +1,9 @@
 
-/*		技能展示
-	*   {
-	*       temp: @value String         				*         模板
-	*       skillsClassify: @value Array                *         掌握的技能综合
-	*       	{
-					skillLanguage: @value String        *         技能名称
-	*       		percent: @value String              *         技能百分比
-	*       		skillTooltip: @value Array          *         对技能的描述
-				}
-	*   }
-
-	temp 有两个值可选：
-		"circle"：饼形
-		"columns":圆柱
-*/
-
 var skills = {
 		temp:"circle",
 		skillsClassify:[
 		{
-			skillLanguage:"html5",
+			skillLanguage:"Html",
 			percent:"90%",
 			skillTooltip:[
 				"熟练掌握各类语义化标签",
@@ -29,7 +13,7 @@ var skills = {
 			]
 		},
 		{
-			skillLanguage:"CSS3",
+			skillLanguage:"CSS",
 			percent:"80%",
 			skillTooltip:[
 				"掌握浮动及文档流特性",
@@ -39,7 +23,7 @@ var skills = {
 			]
 		},
 		{
-			skillLanguage:"javascript",
+			skillLanguage:"JavaScript",
 			percent:"75%",
 			skillTooltip:[
 				"了解数据类型、作用域闭包等语言特性",
@@ -70,7 +54,7 @@ var skills = {
 			]
 		},
 		{
-			skillLanguage:"bootstrap",
+			skillLanguage:"Bootstrap",
 			percent:"80%",
 			skillTooltip:[
 				"了解Bootstrap框架",
