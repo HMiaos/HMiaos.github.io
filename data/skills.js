@@ -1,6 +1,22 @@
 
+/*		技能展示
+	*   {
+	*       temp: @value String         				*         模板
+	*       skillsClassify: @value Array                *         掌握的技能综合
+	*       	{
+					skillLanguage: @value String        *         技能名称
+	*       		percent: @value String              *         技能百分比
+	*       		skillTooltip: @value Array          *         对技能的描述
+				}
+	*   }
+
+	temp 有两个值可选：
+		"circle"：饼形
+		"columns":圆柱
+*/
+
 var skills = {
-		temp:"circle",
+		temp:"columns",
 		skillsClassify:[
 		{
 			skillLanguage:"Html",
@@ -14,7 +30,7 @@ var skills = {
 		},
 		{
 			skillLanguage:"CSS",
-			percent:"80%",
+			percent:"90%",
 			skillTooltip:[
 				"掌握浮动及文档流特性",
 				"精通定位、浏览器兼容性",
@@ -61,6 +77,16 @@ var skills = {
 				"能够使用Bootstrap制作Web页面或Web应用程序",
 				"定制个性化Bootstrap"
 			]
-		}
+		}/*,
+		{
+			skillLanguage:"angularJS",
+			percent:"60%",
+			skillTooltip:[
+				" 理解Angular.js依赖注入的原理，合理划分服务和模块",
+				"熟练使用内置指令和过滤器",
+				"能使用Angular.js从零搭建一个完整的CRUD小应用",
+				"能使用mock对象进行单元测试"
+			]
+		}*/
 	]
 }

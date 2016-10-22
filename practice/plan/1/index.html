@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>全民飞机大战</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+</head>
+<body>
+	<div id="content">
+		<div id="begin">
+			<img src="image/LOGO.png"width="480px">
+	        <div id="start" onclick="begin()">游戏开始</div>
+	        <div id="exit" onclick="ExitGame()">退出游戏</div>
+		</div>
+		<div id="game">
+			<div id="score">
+				<label>得分：</label>
+          		<label id="label">0</label>
+			</div>
+			<div id="suspend">
+	            <button>玩累了？休息一会</button><br/>
+	            <button>点击任意处继续</button>
+        	</div>
+        	<div id="end">
+	            <p class="plantext">总计得分</p>
+	            <p id="planscore">0</p>
+	            <div id="jixua"><button onclick="again()">再玩一次</button></div>
+	        </div>
+		</div>
+	</div>
+		
+	<div id="music">
+		<audio id="zhuxuanlv" src="audio/bgm_zhuxuanlv.mp3" loop="loop"></audio>
+	    <audio id="fight-music" src="audio/bgm_zhandou2.mp3" loop="loop"></audio>
+	    <audio id="fire-music" src="audio/arrow_shot.wav"></audio>
+	    <audio id="hit-music" src="audio/meteorit_explode.mp3"></audio>
+	</div>
+<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

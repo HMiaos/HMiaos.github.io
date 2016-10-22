@@ -17,8 +17,9 @@
 	}
 #black .intro_right .pic {
     border: 3px solid #fff;
-    background: url(../images/hm.jpg) no-repeat;
-}
+    background: url(../images/icon/intro_03.png) no-repeat;
+	background-size: 100% 100%;
+	}
 .pic img{
 	display: none;
 }
@@ -323,7 +324,8 @@
 	}
 #red .intro_right .pic {
     border: 3px solid #e16b5f;
-    background: url(../images/hm.jpg) no-repeat;
+    background: url(../images/icon/intro_03.png) no-repeat;
+    background-size: 100% 100%;
 }
 #red .intro_circle {
 	background: #734776;

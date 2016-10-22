@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body{
+            margin: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        canvas{
+            background: #fff;
+            /*vertical-align: top;*/
+            display: block;
+            /*float: left;*/
+            /*position: absolute;*/
+        }
+    </style>
+</head>
+<body>
+<canvas id="cas" width="500" height="500">
+    你的浏览器不支持canvas
+</canvas>
+
+<script>
+    var cas = document.getElementById('cas');
+
+    //创建绘图环境
+    var gcs = cas.getContext('2d');
+    //游戏数据生成
+    var gameData = createGameData(15,30);
+    //初始和窗口变化时改变canvas大小。
+    window.onresize = resize;
+    resize();
+    var snake = [
+        {
+            x:10,
+            y:10
+        },
+        {
+            x:11,
+            y:10
+        },
+        {
+            x:12,
+            y:10
+        }
+    ];
+    var fx = {
+        x:0,
+        y:1
+    };
+    //初始化地图
+    concat();
+    apple();
+    createMap(gameData,gcs);
+
+
+    //改变蛇的走向
+
+    document.onkeyup = function(ev){
+        switch(ev.keyCode){
+            case 37:
+                    fx.x = 1;
+                    fx.y = 0;
+                break;
+            case 38:
+                    fx.x = 0;
+                    fx.y = 1;
+                break
+            case 39:
+                    fx.x = -1;
+                    fx.y = 0;
+                break;
+            case 40:
+                    fx.x = 0;
+                    fx.y = -1;
+                break
+        }
+    };
+    //开始走
+   setInterval(function(){
+       play();
+   },500);
+    //开始走。
+    function play(){
+        //在这之前判断苹果的位置。
+        var o = {
+            x:snake[0].x-fx.x,
+            y:snake[0].y-fx.y
+        };
+        if(gameData[o.y][o.x] == 2){
+            //在这添加蛇的长度，并且生成一个新的苹果。
+            //这里是表示吃到苹果，只添加不删除。
+            snake.unshift(o);
+            apple();
+        }else{
+            //蛇正常走。
+            snake.unshift(o);
+            var xy = snake.pop();
+            gameData[xy.y][xy.x] = 0;
+        }
+
+        concat();
+        createMap(gameData,gcs);
+    }
+    //把蛇和地图链接起来。
+    function concat(){
+        for(var i=0;i<snake.length;i++){
+            var xy = snake[i];
+            gameData[xy.y][xy.x] = 1;
+        }
+    }
+    //设置一个随机的苹果。
+    function apple(){
+
+       /* if(gameData[y][x]===0){
+            gameData[y][x] = 2;
+        }else{
+
+        }*/
+        var xy = sort();
+        while (gameData[xy.y][xy.x]!==0){
+            xy = sort();
+        }
+        gameData[xy.y][xy.x] = 2;
+    }
+    //获得随机数字。
+    function sort(){
+        var x = Math.floor(Math.random()*gameData[0].length);
+        var y = Math.floor(Math.random()*gameData.length);
+        return {x,y};
+    }
+    //生成游戏地图。
+    function createMap(data,gcs){
+        var lineWidth = 1;
+        var v = {
+            height:cas.height,
+            width:cas.width
+        };
+        var height = parseInt((v.height - (data.length+1)*lineWidth)/data.length);
+        var width = parseInt((v.width - (data[0].length+1)*lineWidth)/data[0].length);
+        console.log(height,width)
+        for(var i=0;i<data.length;i++){
+            for(var j=0;j<data[0].length;j++){
+                switch(data[i][j]){
+                    case 0:gcs.fillStyle = '#000';
+                        break;
+                    case 1:gcs.fillStyle = 'blue';
+                        break;
+                    case 2:gcs.fillStyle = 'pink';
+                }
+
+                gcs.fillRect((width+1)*j,(height+1)*i,width,height);
+            }
+        }
+
+
+    }
+
+    //创建游戏数据。
+    function createGameData(row,cel){
+        var data = [];
+        var arr = [];
+        data.length = row;
+        arr.length = cel;
+        //填充行
+        arr.fill(0);
+        //填充列
+        for(var i=0;i<row;i++){
+            data[i] = [].concat(arr);
+        }
+        return data;
+    }
+    //随可视区缩放
+    function resize(){
+        var v = view();
+        cas.width = v.width;
+        cas.height = v.height;
+        createMap(gameData,gcs);
+    }
+    //获取可视区大小。
+    function view(){
+        var docEle = document.documentElement;
+
+        return {
+            height:docEle.clientHeight,
+            width:docEle.clientWidth
+        };
+    }
+</script>
+</body>
+</html>

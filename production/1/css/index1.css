@@ -1,0 +1,34 @@
+/*
+ ==[TOP]===============================
+ * */
+#topbox{
+	width: 100%;
+	z-index: 1000;
+	background: #fff;
+	top: 0;
+	position: absolute;
+	top: 0;
+}
+#top{
+	
+}
+#top-left{
+	width: 164px;
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+}
+#top-right{
+	height: 100%;
+	float: none;
+}
+#top-right ul{
+	display: flex;
+	justify-content: space-around;
+}
+/*
+ ==[HEADER]===============================
+ * */
+header{
+	margin-top: 70px;
+}

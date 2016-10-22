@@ -146,8 +146,8 @@ body {
 	width: 200px;
     height: 200px;
     border-radius: 100px;
-    background: url(../images/icon/intro_03.jpg) no-repeat;
-    background-size: 100% 100%;
+    background: url(../images/icon/intro_03.jpg) no-repeat 0 -15px;
+    background-size: 115% 135%;
 }
 .intro_circle {
 	width: 8px;
