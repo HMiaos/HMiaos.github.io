@@ -21,5 +21,13 @@ var projects = [
 			projectExplain:"可以根据不用分辨率来使网页适应从不同设备的屏幕。",
 			projectLabel:["html","css3","jQuery","响应式"],
 			projectThumbnail:"images/production/1.jpg"
+		},{
+			projectName:"QQ浏览器",
+			projectWebsite:"production/2/QQ.html",
+		    startTime:"",
+			endTime:"",
+			projectExplain:"QQ浏览器官方主页。",
+			projectLabel:["html","css3","jQuery","animation"],
+			projectThumbnail:"images/production/2.jpg"
 		}
 ]

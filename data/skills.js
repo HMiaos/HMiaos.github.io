@@ -40,7 +40,7 @@ var skills = {
 		},
 		{
 			skillLanguage:"JavaScript",
-			percent:"75%",
+			percent:"80%",
 			skillTooltip:[
 				"了解数据类型、作用域闭包等语言特性",
 				"掌握定时器、数组字符串及递归、数组去重等",
@@ -60,18 +60,8 @@ var skills = {
 			]
 		},
 		{
-			skillLanguage:"canvas",
-			percent:"30%",
-			skillTooltip:[
-				"了解过相关接口绘制各类图形",
-				"尝试过canvas开发小游戏",
-				"能够用简单的canvas技术结合音频实现动画效果的互动",
-				"正在学习"
-			]
-		},
-		{
 			skillLanguage:"Bootstrap",
-			percent:"80%",
+			percent:"90%",
 			skillTooltip:[
 				"了解Bootstrap框架",
 				"能够使用Bootstrap制作Web页面或Web应用程序",
