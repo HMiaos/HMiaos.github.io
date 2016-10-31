@@ -17,13 +17,30 @@
 
 var casees = [
 	{
+		caseName:"静态页面",
+		caseList:[
+			{
+				caseTitle:"爱奇艺PC",
+				publishTime:"",
+				caseThumbnail:"images/practice/aiqiyi/pc.jpg",
+				caseDescription:"仿写的爱奇艺电脑端页面",
+				caseWebsite:"practice/2/aiqiyi-pc/index.html"
+			},{
+				caseTitle:"爱奇艺mobile",
+				publishTime:"",
+				caseThumbnail:"images/practice/aiqiyi/mobile.jpg",
+				caseDescription:"仿写的爱奇艺移动端页面",
+				caseWebsite:"practice/2/iqiyi-mobile/index.html"
+			}
+		]
+	},{
 		caseName:"飞机小游戏",
 		caseList:[
 			{
 				caseTitle:"全民飞机大战",
 				publishTime:"",
 				caseThumbnail:"images/practice/plan/1.jpg",
-				caseDescription:"熟练之后寻找完成素材制作，添加了游戏音效，制作大概费时3个小时左右",
+				caseDescription:"寻找完成的素材制作，并添加了游戏音效",
 				caseWebsite:"practice/plan/1/index.html"
 			},
 			{
@@ -37,7 +54,7 @@ var casees = [
 				caseTitle:"第一次飞机大战作品",
 				publishTime:"",
 				caseThumbnail:"images/practice/plan/2.jpg",
-				caseDescription:"描述：这是我学习过程中完成的第一个小案例，也是第一次尝试完成完整的小作品，踩了很多坑，断断续续共花了四周半时间制作，后又添加和修改了一下功能"
+				caseDescription:"描述：这是我学习过程中完成的第一个小案例，也是第一次尝试完成完整的小作品，踩了很多坑"
 				,caseWebsite:"practice/plan/2/index.html"
 			}
 		]

@@ -1,0 +1,400 @@
+/*样式重置*/
+body,dl,dd,p,h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	font-size: 0.3rem;
+}
+ol,ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+img{
+	border:none;
+	vertical-align: top;
+}
+table{
+	border-collapse:collapse;
+}
+th,td{
+	padding:0;
+}
+th,td{
+	width: 2.5rem;
+	height: 2.5rem;
+}
+input{
+	padding: 0;
+	margin: 0;
+}
+i{
+	margin: 0 0.125rem;
+	font-style: normal;
+}
+
+/*常用工具*/
+.clearFix:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.info{
+	display: none;
+}
+
+.relative{
+	position: relative;
+}
+img{
+	width: 100%;
+	height: 100%;
+}
+body{
+	font-size: 0.4rem;
+}
+
+/*布局*/
+
+/*----index_top*/
+.top{
+	height: 2.5rem;
+	width: 100%;
+	border-top: 0.025rem solid #dedede;
+	background-color: #1f1f1f;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.top_logo{
+	width: 5rem;
+	height: 2.5rem;
+}
+.top_logo a{
+	display: inline-block;
+	width: 5rem;
+	height: 2.5rem;
+}
+.top_i{
+	width: 2.975rem;
+	height: 1.075rem;
+	margin: 0.675rem 0 0 2.125rem;
+}
+.top_i a{
+	display: inline-block;
+	width: 1rem;
+	height: 1.075rem;
+}
+
+.user{
+	margin: 0.7rem 1rem 0 0;
+}	
+.user .fl{
+	color: #FFF;
+	font: 0.625rem/1.1rem "微软雅黑";
+	display: inline-block;
+	margin: 0 0.5rem 0 0;
+}
+.color1{
+	display: inline-block;
+	width: 2.725rem;
+	height: 1.1rem;
+	border: 0.05rem solid #25af1e;
+	border-radius: 0.45rem;
+	color: #25af1e;
+	font: 0.5rem/1.1rem "微软雅黑";
+	text-align: center;
+}
+
+/*header*/
+
+header{
+	height: 1.95rem;
+	border-bottom: 0.05rem solid #e0e0e0;
+	background-color: #f4f4f4;
+}
+header ul{
+	padding-left: 0.5rem;
+}
+header li{
+	margin-right: 0.88rem;
+}
+header li a{
+	font: 0.7rem/1.95rem "微软雅黑";
+	color: #000000;
+}
+.headeri{
+	width: 2.25rem;
+	height: 1.95rem;
+	border-left: 0.025rem solid #dedede;
+}
+.headeri a{
+	display: inline-block;
+	width: 2.25rem;
+	height: 1.95rem;
+}
+.index_search{
+	height: 1.7rem;
+	border-bottom: 0.05rem solid #dedede;
+	background-color: #e7edf1;
+	padding-top: 0.25rem;
+}
+section{
+	background-color: #f0f0f0;
+	border-bottom: 0.025rem solid #d8d8d8;
+}
+.topsearch{
+	margin:0 0.3rem;
+	height: 1.35rem;
+	width: 15.3rem;
+	border: 0.05rem solid #dbdbdb;
+	border-radius: 0.55rem;
+	background: #ffffff;
+	text-align: center;
+	font: 0.625rem/1.35rem "微软雅黑";
+	color: #359d3e;
+}
+.headimg{
+	padding: 0.4rem 0.35rem 0 0.35rem;
+	background-color: #fff;
+}
+.headimg a{
+	display: inline-block;
+	height: 7.15rem;
+	width: 15.3rem;
+}
+.headtext{
+	border-bottom: 0.05rem solid #e5e5e5;
+	background-color: #fff;
+}
+.headtext a{
+	display: inline-block;
+	text-indent: 0.375rem;
+	width: 15.3rem;
+	font: 0.65rem/1.5rem "微软雅黑";
+	color: #000000;
+}
+.title{
+	padding: 0.4rem 0;
+	background-color: #fff;
+	margin-bottom: 0.4rem;
+}
+.title ul{
+	overflow: hidden;
+}
+.title ul li{
+	width: 3.1rem;
+}
+.titleimg{
+	display: inline-block;
+	width: 1.95rem;
+	height: 1.95rem;
+	margin: 0 0.575rem;
+}
+.title li div{
+	width: 3.1rem;
+}
+.title p{
+	text-align: center;
+}
+.title p a{
+	display: inline-block;
+	font: 0.45rem/0.45rem "微软雅黑";
+	color: #000000;
+	padding-top: 0.275rem;
+}
+.today{
+	background-color: #fff;
+	margin-bottom: 0.4rem;
+}
+.section_logo{
+	display: inline-block;
+	width: 1.025rem;
+	height: 1.15rem;
+}
+.today_head{
+	height: 1.7rem;
+	padding: 0.35rem 0.4rem 0;
+	border-bottom: 0.05rem dashed #e6e6e6;
+	font: 0.75rem/1.15rem "微软雅黑";
+	color: #333333;
+}
+.today .today1{
+	padding: 0.5rem 0 0.075rem 0.725rem;
+}
+.today .today1 li{
+	background: url(../img/play1.jpg) no-repeat;
+	margin-bottom: 0.4rem;
+}
+.today_text{
+	display: inline-block;
+	height: 1rem;
+	width: 15rem;
+	text-indent: 1.074rem;
+	font: 0.65rem/0.65rem "微软雅黑";
+	color: #000000;
+}
+.today_img1{
+	display: inline-block;
+	width: 7.475rem;
+	height: 4.75rem;
+}
+.today2{
+	padding-left: 0.05rem;
+}
+.today2 li{
+	padding-left: 0.3rem;
+	margin-bottom: 0.2rem;
+}
+.today2 p{
+	width: 7.475rem;
+	height: 1.5rem;
+}
+.today_img2{
+	display: inline-block;
+	width: 7.475rem;
+	height: 1.5rem;
+	font: 0.65rem/1.5rem "微软雅黑";
+	color: #000000;
+}
+.morebox{
+	border-top: 0.05rem solid #e5e5e5;
+	height: 2.25rem;
+	font: 0.65rem/0.65rem "微软雅黑";
+}
+.morebox a{
+	font: 0.65rem/0.65rem "微软雅黑";
+	color: #3b9a3c;
+	text-align: center;
+}
+.more{
+	display: inline-block;
+	width: 7.5rem;
+	height: 1.5rem;
+	padding-top: 0.75rem;
+}
+.more2{
+	display: inline-block;
+	width: 100%;
+	height: 1.5rem;
+	padding-top: 0.75rem;
+}
+.change{
+	display: inline-block;
+	width: 7.5rem;
+	height: 1.5rem;
+	padding-top: 0.75rem;
+}
+.morebox span{
+	display: inline-block;
+}
+.morebox .span_img{
+	width: 0.65rem;
+	height: 0.65rem;
+}
+.box1{
+	background: #fff;
+	margin-bottom: 0.4rem;
+}
+.box2{
+	background: #fff;
+	margin-bottom: 0.4rem;
+}
+.box3{
+	background: #fff;
+	margin-bottom: 0.4rem;
+}
+.box4{
+	text-align: center;
+}
+.box1_head{
+	height: 1.7rem;
+	padding: 0.35rem 0.4rem 0;
+	font: 0.75rem/1.15rem "微软雅黑";
+	color: #333333;
+}
+.box2_head{
+	height: 1.7rem;
+	padding: 0.35rem 0.4rem 0;
+	font: 0.75rem/1.15rem "微软雅黑";
+	color: #333333;
+}
+.box1_img{
+	display: inline-block;
+	width: 4.85rem;
+	height: 7.3rem;
+}
+.box1 li{
+	margin: 0 0.35rem 0.45rem 0;
+}
+.box1 p{
+	padding-top: 0.25rem;
+	width: 4.85rem;
+}
+.box1_text{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	color: #000;
+	font: 0.65rem/1rem "微软雅黑";
+}
+.box1 ul{
+	padding-left: 0.3rem;
+}
+.box2_img{
+	display: inline-block;
+	width: 7.475rem;
+	height: 4.75rem;
+}
+.box3_img{
+	display: inline-block;
+	width: 3.475rem;
+	height: 3.9rem;
+}
+.box2{
+	padding-left: 0.05rem;
+}
+.box2 li{
+	padding-left: 0.25rem;
+	margin-bottom: 0.2rem;
+}
+.box2 p{
+	width: 7.475rem;
+	height: 1.5rem;
+}
+.box2_text{
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	font: 0.65rem/1.5rem "微软雅黑";
+	color: #000000;
+}
+.box3_text{
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	font: 0.55rem/1.6rem "微软雅黑";
+	color: #000000;
+}
+.box3 li{
+	margin-left: 0.375rem;
+}
+.font1{
+	font: 0.8rem/0.8rem "微软雅黑";
+	color: #cdcdcd;
+	word-spacing: 0.55rem;
+}
+.font2{
+	font: 0.35rem/0.8rem "微软雅黑";
+	color: #cdcdcd;
+	word-spacing: 0.2rem;
+}

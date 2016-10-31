@@ -98,7 +98,12 @@ function contentch(){
 		$('#con_body').html('<div class="conpage2show"><div class="p2show"><img src="img/conpage2-1.png"/></div><div class="p2show"><img src="img/conpage2-2.png"/></div><div class="p2show"><img src="img/conpage2-3.png"/></div></div><div class="conpage2fly"><div><img src="img/conpage2fly-1.png" alt="" /></div><div><img src="img/conpage2fly-2.png" alt="" /></div><div><img src="img/conpage2fly-3.png" alt="" /></div><div><img src="img/conpage2fly-4.png" alt="" /></div></div>')
 	}else
 	if(num == 2){
-		
+		$('#con_body').attr('class','con_body1');
+		$('#con_body').html('<div class="conpage3show"><div><img src="img/p3blue.png"></div><div><img src="img/p3blue2.png"></div><div class="clearFix"><img src="img/p3i1.png" class="fl"><img src="img/p3i2.png" class="fl"><img src="img/p3i3.png" class="fl"></div><div><img src="img/p3text.png"></div><p>清爽舒展的界面，鲜艳明快的色彩和干净利落的动效，让浏览畅快愉悦</p></div>')
+	}else
+	if(num == 3){
+		$('#con_body').attr('class','con_body1');
+		$('#con_body').html('<div class="conpage4show"><div class="p4img1"><img src="img/p4-1.png" alt="" /></div><div class="p4img2"><img src="img/p4-2.png" alt="" /></div><div class="p4img3"><img src="img/p4-3.png" alt="" /></div><div class="p4img4"><img src="img/p4-4.png" alt="" /></div><div class="p4text"><img src="img/p4text.png"/></div><p>内置微信聊天等应用，兼容Chrome扩展体系，应用中心为您提供海量扩展</p></div>')
 	}
 }
 
