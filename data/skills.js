@@ -69,7 +69,17 @@ var skills = {
 			]
 		}/*,
 		{
-			skillLanguage:"angularJS",
+			skillLanguage:"angular.JS",
+			percent:"60%",
+			skillTooltip:[
+				" 理解Angular.js依赖注入的原理，合理划分服务和模块",
+				"熟练使用内置指令和过滤器",
+				"能使用Angular.js从零搭建一个完整的CRUD小应用",
+				"能使用mock对象进行单元测试"
+			]
+		}*//*,
+		{
+			skillLanguage:"vue.JS",
 			percent:"60%",
 			skillTooltip:[
 				" 理解Angular.js依赖注入的原理，合理划分服务和模块",
