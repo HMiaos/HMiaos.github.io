@@ -17,7 +17,7 @@
 var timeAxisArr = [
 		{
 		    startTime:"2014.9",
-			endTime:"2015.2",
+			endTime:"2015.9",
 			companyLogo:'images/icon/expre_logo5.png',
 			companyNam:"中铁六局太原铁路建设有限公司建安项目部",
 			companyWebsite:"",
@@ -26,23 +26,23 @@ var timeAxisArr = [
 			jobContent:"包括：实地测量数据，验证数据，核定方案，维护",
 		},
 		{
-		    startTime:"2015.02",
-			endTime:"2015.10",
-			companyLogo:'',
-			companyNam:"天水城乡规划设计院",
-			companyWebsite:"",
-			jobPost:"预算员",
-			jonTask:"建筑单位预结算工作",
-			jobContent:"根据工程技术部安排完成描图，晒图任务；根据提供资料，设计方案，草图和技术说明绘制正图和底图；设计资料的装订和维护工作",
-		},
-		{
-		    startTime:"2016.03",
-			endTime:"2016.09",
+		    startTime:"2015.09",
+			endTime:"2016.9",
 			companyLogo:'images/icon/expre_logo7.png',
 			companyNam:"北京翔拓科技有限公司（翔拓切云）",
 			companyWebsite:"",
-			jobPost:"前端开发",
-			jonTask:"视觉稿还原与网站页面制作",
-			jobContent:"包括：编写静态的html代码，利用css实现设计稿要求的动画效果，负责编写需求分析word文档，实现页面简单的删除、添加、批量处理等功能。",
+			jobPost:"推广助理|销售部",
+			jonTask:"网站页面制作、微信运营、网站内容编辑",
+			jobContent:"包括：负责编写需求分析word文档；制作静态的h5页面，实现页面简单的功能；微信平台软文推广。",
+		},
+		{
+		    startTime:"2016.09",
+			endTime:"今",
+			companyLogo:'images/icon/expre_logo8.png',
+			companyNam:"宅急送快运股份有限公司",
+			companyWebsite:"",
+			jobPost:"推广专员|市场部 ",
+			jonTask:"广告设计、微信运营、组织推广活动",
+			jobContent:"包括：微信平台软文推广；客户广告平面设计；市区同城活动扫楼推广；电联客户反馈；核实基层员工薪酬信息（小件员奖励到位情况等）。",
 		}
 ]
