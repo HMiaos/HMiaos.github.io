@@ -18,7 +18,7 @@
 var skills = {
 		temp:"columns",
 		skillsClassify:[
-		{
+		/*{
 			skillLanguage:"Html",
 			percent:"90%",
 			skillTooltip:[
@@ -67,7 +67,7 @@ var skills = {
 				"能够使用Bootstrap制作Web页面或Web应用程序",
 				"定制个性化Bootstrap"
 			]
-		}/*,
+		}*//*,
 		{
 			skillLanguage:"angular.JS",
 			percent:"60%",
